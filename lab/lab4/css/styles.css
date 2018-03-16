@@ -1,0 +1,24 @@
+header{
+    width:100%;
+    background-color: #000000;
+    font-family: "Lucida Console", Lucida, Monospace;
+}
+
+footer{
+    
+    background-color:#eeeeee;
+}
+
+center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: "Lucida Console", Lucida, Monospace;
+    background:#eeeeee;
+	color:Black;
+	font:normal 10 px;
+	text-align:center; 
+	}

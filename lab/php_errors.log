@@ -1,0 +1,63 @@
+[14-Mar-2018 15:37:32 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/lab/lab4/index.php on line 52
+[14-Mar-2018 15:38:08 UTC] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 15:38:08 UTC] PHP Stack trace:
+[14-Mar-2018 15:38:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab/lab4/index.php:0
+[14-Mar-2018 15:38:08 UTC] PHP   2. getDatabaseConnection() /home/ubuntu/workspace/lab/lab4/index.php:40
+[14-Mar-2018 15:38:08 UTC] PHP   3. PDO->__construct() /home/ubuntu/workspace/lab/lab4/database.php:11
+[14-Mar-2018 15:38:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known' in /home/ubuntu/workspace/lab/lab4/database.php:11
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(11): PDO->__construct('mysql:host=cbet...', 'e7hgk7zf4zd7h0v...', 'o3z4gl72119psu3...')
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 15:58:11 UTC] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 15:58:11 UTC] PHP Stack trace:
+[14-Mar-2018 15:58:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab/lab4/index.php:0
+[14-Mar-2018 15:58:11 UTC] PHP   2. getDatabaseConnection() /home/ubuntu/workspace/lab/lab4/index.php:40
+[14-Mar-2018 15:58:11 UTC] PHP   3. PDO->__construct() /home/ubuntu/workspace/lab/lab4/database.php:11
+[14-Mar-2018 15:58:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known' in /home/ubuntu/workspace/lab/lab4/database.php:11
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(11): PDO->__construct('mysql:host=$hos...', NULL, NULL)
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 15:59:18 UTC] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 15:59:18 UTC] PHP Stack trace:
+[14-Mar-2018 15:59:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab/lab4/index.php:0
+[14-Mar-2018 15:59:18 UTC] PHP   2. getDatabaseConnection() /home/ubuntu/workspace/lab/lab4/index.php:40
+[14-Mar-2018 15:59:18 UTC] PHP   3. PDO->__construct() /home/ubuntu/workspace/lab/lab4/database.php:11
+[14-Mar-2018 15:59:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known' in /home/ubuntu/workspace/lab/lab4/database.php:11
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(11): PDO->__construct('mysql:host=$hos...', NULL, NULL)
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 16:04:53 UTC] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 16:04:53 UTC] PHP Stack trace:
+[14-Mar-2018 16:04:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab/lab4/index.php:0
+[14-Mar-2018 16:04:53 UTC] PHP   2. getDatabaseConnection() /home/ubuntu/workspace/lab/lab4/index.php:40
+[14-Mar-2018 16:04:53 UTC] PHP   3. PDO->__construct() /home/ubuntu/workspace/lab/lab4/database.php:11
+[14-Mar-2018 16:04:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known' in /home/ubuntu/workspace/lab/lab4/database.php:11
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(11): PDO->__construct('mysql:host=$hos...', NULL, NULL)
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 11
+[14-Mar-2018 16:18:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'tech-devices'' in /home/ubuntu/workspace/lab/lab4/database.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(22): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 22
+[15-Mar-2018 22:49:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'tech_checkout'' in /home/ubuntu/workspace/lab/lab4/database.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(22): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 22
+[15-Mar-2018 22:56:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'tech_checkout'' in /home/ubuntu/workspace/lab/lab4/database.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/lab/lab4/database.php(22): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/lab/lab4/index.php(40): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lab/lab4/database.php on line 22
