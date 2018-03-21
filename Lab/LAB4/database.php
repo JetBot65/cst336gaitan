@@ -14,18 +14,14 @@ function getDatabaseConnection() {
 }
 
    //var_dump($hasConnUrl);
-    $host = $hasConnUrl ? $connParts['cbetxkdyhwsb.us-east-1.rds.amazonaws.com'] : getenv('IP');
+    $host = $hasConnUrl ? $connParts['if0ck476y7axojpg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['lbz4ylohgaug7ala'],'/') : 'tech_checkout';
     $username = $hasConnUrl ? $connParts['e7hgk7zf4zd7h0vk'] : getenv('C9_USER');
     $password = $hasConnUrl ? $connParts['o3z4gl72119psu30'] : '';
 
     return new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
   
-    
-}
-
-
-
+    }
 
 
 ?>
