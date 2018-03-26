@@ -1,0 +1,78 @@
+[22-Mar-2018 03:43:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/ourstore.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/ourstore.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/ourstore.php on line 19
+[22-Mar-2018 03:44:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/ourstore.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/ourstore.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/ourstore.php on line 19
+[24-Mar-2018 05:21:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/ourstore.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/ourstore.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/ourstore.php on line 19
+[24-Mar-2018 17:07:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/ourstore.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/ourstore.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/ourstore.php on line 19
+[25-Mar-2018 00:24:46 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/Project/team_project/ourstore.php on line 69
+[25-Mar-2018 00:24:46 UTC] PHP Stack trace:
+[25-Mar-2018 00:24:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/Project/team_project/ourstore.php:0
+[25-Mar-2018 00:24:46 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/Project/team_project/ourstore.php:69
+[25-Mar-2018 01:35:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/ourstore.php(70): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 00:14:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/ourstore.php(70): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 02:52:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/ourstore.php(70): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 23:08:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/createtemp.php(4): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 23:09:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/createtemp.php(4): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 23:10:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/createtemp.php(4): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 23:12:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/ourstore.php(70): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 23:15:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/ourstore.php(70): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19
+[26-Mar-2018 23:16:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dBName'' in /home/ubuntu/workspace/Project/team_project/database.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/Project/team_project/database.php(19): PDO->__construct('mysql:host=0.0....', 'jetblack65', '')
+#1 /home/ubuntu/workspace/Project/team_project/ourstore.php(70): include('/home/ubuntu/wo...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/Project/team_project/database.php on line 19

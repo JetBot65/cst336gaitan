@@ -1,0 +1,28 @@
+[26-Mar-2018 15:27:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab/LAB4/database.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/Lab/LAB4/database.php(22): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 /home/ubuntu/workspace/Lab/LAB4/index.php(48): getDatabaseConnection()
+#2 /home/ubuntu/workspace/Lab/LAB4/index.php(76): getDeviceTypes()
+#3 {main}
+  thrown in /home/ubuntu/workspace/Lab/LAB4/database.php on line 22
+[26-Mar-2018 15:54:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab/LAB4/database.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/Lab/LAB4/database.php(22): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 /home/ubuntu/workspace/Lab/LAB4/index.php(48): getDatabaseConnection()
+#2 /home/ubuntu/workspace/Lab/LAB4/index.php(76): getDeviceTypes()
+#3 {main}
+  thrown in /home/ubuntu/workspace/Lab/LAB4/database.php on line 22
+[26-Mar-2018 15:56:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab/LAB4/database.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/Lab/LAB4/database.php(22): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 /home/ubuntu/workspace/Lab/LAB4/index.php(48): getDatabaseConnection()
+#2 /home/ubuntu/workspace/Lab/LAB4/index.php(76): getDeviceTypes()
+#3 {main}
+  thrown in /home/ubuntu/workspace/Lab/LAB4/database.php on line 22
+[26-Mar-2018 20:19:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab/LAB4/database.php:23
+Stack trace:
+#0 /home/ubuntu/workspace/Lab/LAB4/database.php(23): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 /home/ubuntu/workspace/Lab/LAB4/index.php(48): getDatabaseConnection()
+#2 /home/ubuntu/workspace/Lab/LAB4/index.php(76): getDeviceTypes()
+#3 {main}
+  thrown in /home/ubuntu/workspace/Lab/LAB4/database.php on line 23

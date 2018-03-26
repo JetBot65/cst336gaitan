@@ -1,21 +1,4 @@
-<?php
-// connect to our mysql database server
 
-function getDatabaseConnection() {
-    $host = "us-cdbr-iron-east-05.cleardb.net";
-    $username = "bb108e997bcdab";
-    $password = "7b071f8b";
-    $dbname = "heroku_3d24ca78bc82e88"; 
-    
-    // Create connection
-    $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    return $dbConn; 
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,32 +38,52 @@ body {
     clear: both;
 }
 </style>
-<h1></h1>
+
 <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-<div class="header">
-  <img src="img/header.jpg" /> <span class="title">MATT'S Throwback CD's</span>
+<div class="container">
+  <img src="img/header.jpg" alt="Header" style="width:90%;" style= "height:50%">
+  <div class="centered">Centered</div>
 </div>
-
 
 <div class="row">
   <div class="column side">
-    <h2>CD'S</h2>
+    <h2>CD'S/Records</h2>
   	<img src="img/boombox.jpg" alt="picture of boombox" class="left">
   </div>
   <div class="column middle">
     <h1>WHO ARE WE!</h1>
-    <p>Matt's Throwback CD's is a special order online store that delivers, music, posters and old school gear.</p>
+    <p>Matt's Hip-Hop Stop is a special order online store that delivers oldschool cd'd and records.</p>
   </div>
  
   <div class="column ">
-    <h2>POSTERS</h2>
+    <h2>Hip-Hop Stop</h2>
    	<img src="img/ospos2.jpg" alt="poster" class="left">
   </div>
-  
-</div>
-  
-</body>
+  </div>
+  <br><br>
+  <table width="400">
+    
+    <?php
+    //connect to database
+      include 'database.php'; 
+      
+    while ($row =mysql_fetch_array($results)){
+      extract ($row);
+      echo "<tr><td align=\"center\">";
+      echo "<a href=\"getprod.php?prodid=" . $products_prodnum . "\">";
+      echo "<em>THUMBNAIL<br>IMAGE</em></a></td>";
+      echo "<td>";
+      echo "<a href=\"getprod.php?prodid=" . $products_prodnum . "\">";
+      echo $products_name;
+      echo "</td></a>";
+      echo "<td align=\"right\">";
+      echo "<a href=\"getprod.php?prodid=" . $products_prodnum . "\">";
+      echo "$" . $products_price;
+      echo "</a></td></tr>";
+    }
+    ?>
+  </table>
+  </body>
 </html>
