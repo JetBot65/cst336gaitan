@@ -1,0 +1,46 @@
+
+body {
+    font-family: "Lucida Console", Lucida, Monospace;
+    background:lightblue;
+	color:Black;
+	font:normal 10 px;
+	text-align:center; 
+	text-shadow: 2px 2px #b3b3b3;
+	}
+
+
+.logo{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+.title{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+    position: relative;
+    top: 13px;
+    text-shadow: 2px 2px  #b3b3b3;
+}
+
+table, td{
+	    border:2px solid black;
+	}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
