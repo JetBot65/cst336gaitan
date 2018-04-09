@@ -5,7 +5,7 @@ function getDatabaseConnection() {
        
     //$connParts = parse_url($url);
     $connUrl = getenv('JAWSDB_MARIA_URL');
-    $connUrl = "";
+    $connUrl = "mysql://e7hgk7zf4zd7h0vk:o3z4gl72119psu30@if0ck476y7axojpg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/lbz4ylohgaug7ala";
     $hasConnUrl = !empty($connUrl);
 
     $connParts = null;
