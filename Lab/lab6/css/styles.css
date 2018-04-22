@@ -1,0 +1,52 @@
+body{
+    background-color: #ddd;
+    text-align:center;
+}
+.cover{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-align: center;
+    color: #333;
+}
+.searchModal{
+    display: none;
+}
+.deleteModal{
+    display:none;
+}
+.searchModal .inner,
+.deleteModal .inner{
+    position: fixed;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    background-color: #fff;
+    padding: 50px;
+}
+.searchModal,
+.deleteModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.searchModal:before,
+.deleteModal:before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
+}

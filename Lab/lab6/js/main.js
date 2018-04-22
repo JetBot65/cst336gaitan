@@ -1,7 +1,7 @@
 var clientId = "b6c43a5c8db140eb8a76653656c24fae";
 var clientSecret = "c2bf4ea901b74a4484c77f91c7dc2295";
-var oAuthToken = "BQDdVGOYlYQ2lpFcwIhpnwlahMBM9zPrN7NNTpr15i8MOWWf1-RFKRIudxKcLW5fUFeiF2n2j-HaoJIt_aTPYrXNfqoErtBWGhr5RC32r5SieeUQ0LYVFjBn-jJa7P78Vvt9t5Hc4bsL6WKrK2tw_bC3atTHP_Jusg9u_DS9fID89N1X3PJ006ICsp-6n6bSM_Cxm389dWcWztxmGy_yNZa2qsYf6YBoMjPHR2Ew07muG5CfNnizYWSGwSd-67hlevbQaZ2qkllvpXhRc1I6PuVlIpk";
-
+var oAuthToken = "BQAbnYeEyhk0EIKNw-iqOeCt8l-4AssPtXPW-2oehNNvcDVjYHVum78yvhxQcqbqgMrW4SsYGcdnolvTvOCHjUagxhnXsIGS6Woa5tQBAW2vXryhzXUt7zQBd7hFKg6YbnvaVisQRg3JWSLQDb1QmNdIB-07ZqmLMRR12r5Yoxtz0t6cQQc5BbV4UwRFvN-oc6JPfsHgIpJ72raftP1bJIoBeNdJO6aHt6U1Sw_tLKKNOLknahsi_TBoHwK59zetFEc-0PplK37kIwgTVZUJ1QG-T3I";
+var theAudio;
 
 $(function() {
     $('.searchCloseButton').click(function(e){
@@ -10,9 +10,101 @@ $(function() {
     });
     
     $(document).on('click','.addSong',function(){
-        console.log('here');
        var item = $(this).parents('.result-item');
-       console.log(item.data('track'));
+       var artist = item.data('artist');
+       var name = item.data('name');
+       var track = item.data('track');
+       var album = item.data('album');
+       var cover = item.data('cover');
+       $(".playList").append(
+            $("<div class='track-item'>")
+            .text(name +' by '+artist)
+            .attr('data-artist',artist)
+            .attr('data-name',name)
+            .attr('data-track',track)
+            .attr('data-album',album)
+            .attr('data-cover',cover)
+            .append("<button class='moveUp'>Up</button><button class='moveDown'>Down</button><button class='Delete'>Delete</button>")
+        );
+    });
+    
+    $(document).on('click','.moveUp',function(){
+        var currentItem = $(this).parents('.track-item');
+        var clickedIndex = $(currentItem).index();
+        currentItem.insertBefore($('.playList .track-item').eq(clickedIndex-1));
+    });
+    
+    
+    $(document).on('click','.moveDown',function(){
+        var currentItem = $(this).parents('.track-item');
+        var clickedIndex = $(currentItem).index();
+        console.log(clickedIndex);
+        currentItem.insertAfter($('.playList .track-item').eq(clickedIndex+1));
+    });
+    
+      
+    $(document).on('click','.Delete',function(){
+        $('.itemIndex').val($(this).parents('.track-item').index());
+        $('.deleteModal').show();
+    });
+    $('.removeCancelButton').click(function(){
+        $('.deleteModal').hide();
+    });
+    $('.removeRemoveButton').click(function(e){
+        var indexToBeRemoved = $('.itemIndex').val();
+        $('.playList .track-item').eq(indexToBeRemoved).remove();
+        $('.deleteModal').hide();
+    });
+    
+    $('.play').click(function(){
+       if($('.playList .track-item').length){
+           var item = $('.playList .track-item:first');
+            $('.cover').attr('src',$(item).data('cover'));
+            $('.name').text($(item).data('name'));
+            $('.artist').text($(item).data('artist'));
+            $('.album').text($(item).data('album'));
+            if(theAudio!=undefined){
+                theAudio.pause();
+            }
+            $('.playList .track-item:first').addClass('current');
+            theAudio = new Audio($(item).data('track'));
+            theAudio.play();
+       }
+    });
+    $('.next').click(function(){
+        var currentIndex = $('.playList .track-item').index($('.current'));
+        var nextItem = $('.playList .track-item').eq(currentIndex+1);
+        $('.cover').attr('src',$(nextItem).data('cover'));
+        $('.name').text($(nextItem).data('name'));
+        $('.artist').text($(nextItem).data('artist'));
+        $('.album').text($(nextItem).data('album'));
+        if(theAudio!=undefined){
+            theAudio.pause();
+        }
+        theAudio = new Audio($(nextItem).data('track'));
+        theAudio.play();
+        $('.playList .current').removeClass('current');
+        $(nextItem).addClass('current');
+    });
+    
+    $('.prev').click(function(){
+        var currentIndex = $('.playList .track-item').index($('.current'));
+        var prevItem = $('.playList .track-item').eq(currentIndex-1);
+        $('.cover').attr('src',$(prevItem).data('cover'));
+        $('.name').text($(prevItem).data('name'));
+        $('.artist').text($(prevItem).data('artist'));
+        $('.album').text($(prevItem).data('album'));
+        if(theAudio!=undefined){
+            theAudio.pause();
+        }
+        theAudio = new Audio($(prevItem).data('track'));
+        theAudio.play();
+        $('.playList .current').removeClass('current');
+        $(prevItem).addClass('current');
+    });
+    
+    $('.openSearch').click(function(){
+        $('.searchModal').show(); 
     });
     
     $('.searchSearchButton').click(function(e){
@@ -35,9 +127,18 @@ $(function() {
             if(data.tracks != undefined){
                 for (var i = 0; i < data.tracks.items.length; i++) {
                     var item = data.tracks.items[i];
-                    $(".resultsContainer").append(
-                        $("<div class='result-item'>").text(item.name +' by '+item.artists[0].name).attr('data-artist',item.artists[0].name).attr('data-name',item.name).attr('data-track',item.external_urls.spotify).append("<button class='addSong'>Add</button>")
-                    );
+                    if(item.preview_url !=null){
+                        $(".resultsContainer").append(
+                            $("<div class='result-item'>")
+                            .text(item.name +' by '+item.artists[0].name)
+                            .attr('data-artist',item.artists[0].name)
+                            .attr('data-name',item.name)
+                            .attr('data-track',item.preview_url)
+                            .attr('data-album',item.album.name)
+                            .attr('data-cover',item.album.images[0].url)
+                            .append("<button class='addSong'>Add</button>")
+                        );
+                    }
                 }
             }
         },

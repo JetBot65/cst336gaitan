@@ -2,26 +2,48 @@
 <html>
     <head>
         <title>Terry Player</title>
-        <link rel="stylesheet" href="css/styls.css" type="text/css" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
+        <div class="player">
+            <img class="cover"></img>
+            <h1 class="name"></h1>
+            <h2 class="artist"></h2>
+            <h3 class="album"></h3>
+            <div class="controls">
+                <button class="prev">Prev</button>
+                <button class="play">Play</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+        <div><button class="openSearch">Add</button></div>
         <div class="playList">
             
         </div>
         
         
-        <div class="searchMoal">
-            <h1>Search by Song, Album, Artist</h1>
-            <input type="text" name="keyword" class="keyword" />
-            <button class="searchCloseButton">Close</button>
-            <button class="searchSearchButton">Search</button>
-            <div class="results">
-                <h2>Results found</h2>
-                <div class="resultsContainer"></div>
+        <div class="searchModal">
+            <div class="inner">
+                <h1>Search by Song, Album, Artist</h1>
+                <input type="text" name="keyword" class="keyword" />
+                <button class="searchCloseButton">Close</button>
+                <button class="searchSearchButton">Search</button>
+                <div class="results">
+                    <h2>Results found</h2>
+                    <div class="resultsContainer"></div>
+                </div>
             </div>
         </div>
-        <div class="removeModal"></div>
+        <div class="deleteModal">
+            <div class="inner">
+                <h1>Confirm Removal</h1>
+                <p>Are you sure you want to remove this song from playlist?</p>
+                <button class="removeCancelButton">Cancel</button>
+                <button class="removeRemoveButton">Remove</button>
+                <input type="hidden" class="itemIndex" name=""/>
+            </div>
+        </div>
     </body>
 </html>
