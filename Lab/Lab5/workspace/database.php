@@ -1,24 +1,23 @@
 <?php
+// connect to our mysql database server
 
-function getDatabaseConnection()
-{
-    
-    
-    //$host = "localhost";
-    //$username = "jetblack65";
-    //$password = "";
-    //$dbname="techcheckout";
-    
-    
-    $host = "us-cdbr-iron-east-05.cleardb.net";
-    $username = "bb108e997bcdab";
-    $password = "7b071f8b";
-    $dbname = "heroku_3d24ca78bc82e88"; 
-
-// Create connection
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    return $conn;
-    
+function getDatabaseConnection(){
+  $connParts = parse_url($url);
+  $connUrl = getenv('JAWSDB_MARIA_URL');
+  $hasConnUrl = !empty($connUrl);
+  
+  $connParts = null;
+  if ($hasConnUrl) {
+      $connParts = parse_url($connUrl);
   }
-
+  
+  $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
+  
+  $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'tech_checkout';//
+  $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
+  $password = $hasConnUrl ? $connParts['pass'] : '';
+  
+  return new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+}
+ 
 ?>
