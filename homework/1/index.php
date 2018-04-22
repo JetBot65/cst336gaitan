@@ -10,7 +10,7 @@
          <a href="/homework/hwk2/index.php">Homework 2 Link</a>
          <a href="/Lab/LAB4/index.php">Lab4 Link</a>
          <a href="/Lab/Lab5/index.php">Lab5 Link</a>
-		 <a href="/homework/1/hwk4/index.html">Homework 4 link</a>
+		 <a href="/homework/hwk4/index.html">Homework 4 link</a>
     </div>
     </body>
 </html>
