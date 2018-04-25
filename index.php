@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title> </title>
@@ -12,6 +13,7 @@
          <a href="/Lab/Lab5/index.php">Lab5</a>
 		 <a href="/homework/hwk4/index.html">Hwk4</a>
 		 <a href="/Lab/lab6/index.html">Lab6</a>
+        
     </div>
     </body>
 </html>
