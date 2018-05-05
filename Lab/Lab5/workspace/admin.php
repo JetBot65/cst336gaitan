@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
+if (empty($_SESSION['username'])) {  //checks whether the admin is logged in
     header("Location: index.php");
+    exit();
 }
 
 function userList(){

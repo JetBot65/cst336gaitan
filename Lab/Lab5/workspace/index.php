@@ -8,8 +8,8 @@ function loginProcess() {
         include 'database.php';
         $conn = getDatabaseConnection();
       
-            $username = "admin";
-            $password = sha1($_POST['password']);
+            $username = $_POST['username'];
+            $password = $_POST['password'];
             
             $sql = "SELECT *
                     FROM Admin
@@ -23,7 +23,6 @@ function loginProcess() {
             $stmt = $conn->prepare($sql);
             $stmt->execute($namedParameters);
             $record = $stmt->fetch();
-            
             if (empty($record)) {
                 
                 echo "Wrong Username or password";
