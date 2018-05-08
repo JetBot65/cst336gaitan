@@ -37,3 +37,25 @@ Stack trace:
 [02-May-2018 16:36:08 UTC] PHP Stack trace:
 [02-May-2018 16:36:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/homework/hwk5/quiz.php:0
 [02-May-2018 16:36:08 UTC] PHP   2. mysql_connect() /home/ubuntu/workspace/homework/hwk5/quiz.php:302
+[07-May-2018 15:24:38 UTC] PHP Warning:  include(../../includes/database.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/homework/hwk5/quiz.php on line 301
+[07-May-2018 15:24:38 UTC] PHP Stack trace:
+[07-May-2018 15:24:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/homework/hwk5/quiz.php:0
+[07-May-2018 15:24:38 UTC] PHP Warning:  include(): Failed opening '../../includes/database.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/homework/hwk5/quiz.php on line 301
+[07-May-2018 15:24:38 UTC] PHP Stack trace:
+[07-May-2018 15:24:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/homework/hwk5/quiz.php:0
+[07-May-2018 15:24:38 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/ubuntu/workspace/homework/hwk5/quiz.php on line 302
+[07-May-2018 15:24:38 UTC] PHP Stack trace:
+[07-May-2018 15:24:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/homework/hwk5/quiz.php:0
+[07-May-2018 15:24:38 UTC] PHP   2. mysql_connect() /home/ubuntu/workspace/homework/hwk5/quiz.php:302
+[07-May-2018 15:35:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'final'' in /home/ubuntu/workspace/homework/hwk5/database.php:5
+Stack trace:
+#0 /home/ubuntu/workspace/homework/hwk5/database.php(5): PDO->__construct('mysql:host=loca...', 'jetblack65', '')
+#1 /home/ubuntu/workspace/homework/hwk5/quiz.php(3): getConnection('localhost', 'final', 'jetblack65', '')
+#2 {main}
+  thrown in /home/ubuntu/workspace/homework/hwk5/database.php on line 5
+[08-May-2018 21:03:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'final'' in /home/ubuntu/workspace/homework/hwk5/database.php:5
+Stack trace:
+#0 /home/ubuntu/workspace/homework/hwk5/database.php(5): PDO->__construct('mysql:host=loca...', 'jetblack65', '')
+#1 /home/ubuntu/workspace/homework/hwk5/quiz.php(3): getConnection('localhost', 'final', 'jetblack65', '')
+#2 {main}
+  thrown in /home/ubuntu/workspace/homework/hwk5/database.php on line 5
